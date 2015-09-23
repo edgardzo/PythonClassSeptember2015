@@ -1,0 +1,33 @@
+class car(object):
+
+    wheels = 4
+    carcount = 0
+
+    def __init__(self, fabricante, modelo, color):
+        self.fabricante = fabricante
+        self.modelo = modelo
+        self.color = color
+        self.carcount = self.carcount + 1
+        print (self.carcount)
+
+    def displayCount(self):
+        print ("Cantidad de autos", self.carcount)
+
+    def displayCar(self):
+        print ("Fabricante ", self.fabricante, " Modelo ", self.modelo, " Color ", self.color)
+
+def main():
+
+    print (car.carcount)
+
+    mustang = car('Ford', 'Mustang', 'Black')
+    jeepWrangler = car('Chrysler', 'Jeep', 'Green')
+    jeepWrangler.displayCar()
+
+    print (car.carcount)
+
+# No se modifica el contador de autos...¿Porque?
+
+if __name__ == '__main__':
+    main()
+
